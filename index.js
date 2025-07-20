@@ -125,7 +125,7 @@ function createAddAndRemoveButton(item) {
     element.classList.add("incrAndDecr", "flex", "flex-row", "justify-between", "space-x-10", "items-center", "rounded-full", "py-3", "px-3", "absolute", "left-1/2", "-translate-1/2", "bg-red");
     decrementButton.classList.add("decrement", "border", "border-rose50", "flex", "justify-center", "items-center", "rounded-full", "w-4", "h-4","hover:cursor-pointer");
     decrementImage.setAttribute("src", IMAGES.decrement)
-    totalItems.classList.add("count", "text-rose50", "font-[600]");
+    totalItems.classList.add("item-count", "text-rose50", "font-[600]");
     totalItems.innerText = "1";
     incrementButton.classList.add("increment", "border", "border-rose50", "flex", "justify-center", "items-center", "rounded-full", "w-4", "h-4","hover:cursor-pointer");
     incrementImage.setAttribute("src", IMAGES.increment);
@@ -242,7 +242,7 @@ function addItems(data) {
 }
 
 function itemsAndCost() {
-    const totalItems = cartBox.querySelector("#count");
+    const totalItems = cartBox.querySelector("#cart-count");
     totalItems.innerText = data.reduce((noOfItems, item) => {
         noOfItems += item.count;
         return noOfItems;
@@ -258,7 +258,7 @@ function increaseAndDecreaseItems(e) {
     const increment = e.target.closest(".increment");
     const decrement = e.target.closest(".decrement");
     const item = e.target.closest(".dessert");
-    const noOfItems = item.querySelector(".count");
+    const noOfItems = item.querySelector(".item-count");
     const getItem = findItem(item.querySelector(".name").innerText);
 
     if (increment) {
@@ -278,11 +278,11 @@ function increaseAndDecreaseItems(e) {
             if (data[index].count == 0) {
                 hideStylesOnItem(item);
                 data.splice(index, 1);
-                if (data.length == 0) {
-                    showEmptyCart();
-                }
+                updateCartDetails();
             }
-            updateCartDetails();
+            if (data.length == 0) {
+                showEmptyCart();
+            }
         }
     }
 }
