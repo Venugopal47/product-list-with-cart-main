@@ -152,7 +152,7 @@ function createCartDetails() {
     const startText = document.createElement("p");
     const important = document.createElement("span");
     const endText = document.createElement("p");
-    const confirmOrder = document.createElement("button");
+    const confirmOrderButton = document.createElement("button");
 
     cartDetails.id = "cartDetails";
     cartDetails.classList.add("flex", "flex-col", "space-y-8");
@@ -171,9 +171,9 @@ function createCartDetails() {
     startText.innerText = "This is a";
     important.innerText = "carbon-neutral";
     endText.innerText = "delivery";
-    confirmOrder.id = "confirmOrder"
-    confirmOrder.classList.add("rounded-full", "flex", "justify-center", "items-center", "bg-red", "text-rose100", "text-xl", "font-[600]", "py-3","hover:cursor-pointer");
-    confirmOrder.innerText = "Confirm Order";
+    confirmOrderButton.id = "confirmOrder"
+    confirmOrderButton.classList.add("rounded-full", "flex", "justify-center", "items-center", "bg-red", "text-rose100", "text-xl", "font-[600]", "py-3","hover:cursor-pointer");
+    confirmOrderButton.innerText = "Confirm Order";
 
     cartPrice.appendChild(orderTotal);
     cartAmount.appendChild(number);
@@ -186,7 +186,7 @@ function createCartDetails() {
     cartDetails.appendChild(cartItems);
     cartDetails.appendChild(cartPrice);
     cartDetails.appendChild(deliveryType);
-    cartDetails.appendChild(confirmOrder);
+    cartDetails.appendChild(confirmOrderButton);
     cartBox.appendChild(cartDetails);
 }
 
