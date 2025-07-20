@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <title>Product list with cart</title>
+</head>
+<body class="bg-rose50">
+  <main class="w-[90%] flex flex-col space-y-10 mx-auto pt-10 2xl:flex-row 2xl:justify-between 2xl:pt-20 2xl:space-y-0 2xl:items-start">
+    <section class="description 2xl:w-[65%]">
+      <h1 class="text-4xl text-rose900 font-[700] mb-8">Desserts</h1>
+      <div id="items" class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      </div>
+    </section>
+    <section id="cartBox" class="bg-white py-10 px-6 rounded-xl md:w-[60%] md:self-center 2xl:self-start 2xl:w-[30%]">
+      <h1 class="text-red text-2xl font-[700] mb-10">Your Cart (<span id="count">0</span>)</h1>
+      <div id="emptyCart" class="flex flex-col items-center gap-4">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="empty cart illustration">
+        <p>Your added items will appear here</p>
+      </div>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+<!-- 
+  Desserts
+
+  Waffle with Berries
+  Waffle
+  6.50
+  Add to Cart
+
+  Vanilla Bean Crème Brûlée
+  Crème Brûlée
+  7.00
+  Add to Cart
+
+  Macaron Mix of Five
+  Macaron
+  8.00
+  Add to Cart
+
+  Classic Tiramisu
+  Tiramisu
+  5.50
+  Add to Cart
+
+  Pistachio Baklava
+  Baklava
+  4.00
+  Add to Cart
+
+  Lemon Meringue Pie
+  Pie
+  5.00
+  Add to Cart
+
+  Red Velvet Cake
+  Cake
+  4.50
+  Add to Cart
+
+  Salted Caramel Brownie
+  Brownie
+  4.50
+  Add to Cart
+
+  Vanilla Panna Cotta
+  Panna Cotta
+  6.50
+  Add to Cart
+
+  
+  Your added items will appear here -->
+</body>
+</html>
