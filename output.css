@@ -495,20 +495,6 @@
       }
     }
   }
-  .hover\:bg-rose50 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-rose50);
-      }
-    }
-  }
-  .hover\:bg-rose100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-rose100);
-      }
-    }
-  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
