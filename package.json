@@ -4,7 +4,7 @@
   "description": "![Design preview for the Product list with cart coding challenge](./preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build":"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+    "build":"npx @tailwindcss/cli -i ./input.css -o ./output.css",
     "watch": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
   "keywords": [],
