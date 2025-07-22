@@ -278,8 +278,8 @@ function increaseAndDecreaseItems(e) {
             if (data[index].count == 0) {
                 hideStylesOnItem(item);
                 data.splice(index, 1);
-                updateCartDetails();
             }
+            updateCartDetails();
             if (data.length == 0) {
                 showEmptyCart();
             }
